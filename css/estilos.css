@@ -1,0 +1,442 @@
+/* 1. CONFIGURACIÓN GENERAL Y VARIABLES */
+:root {
+    /* Identidad Visual Corporativa */
+    --color-fondo: #0f0f0f;
+    --color-superficie: #1a1a1a;
+    --color-borde: #2a2a2a;
+    --color-texto-principal: #ffffff;
+    --color-texto-secundario: #a0a0a0;
+
+    /* Paleta de Acentos Urbanos */
+    --color-azul: #16a2c1;
+    --color-rosa: #fc3582;
+    --color-amarillo: #f9b02b;
+    --color-naranja: #f78533;
+    
+    /* Tipografías Profesionales */
+    --fuente-titulos: 'Poppins', 'Montserrat', sans-serif;
+    --fuente-cuerpo: 'Inter', 'Roboto', sans-serif;
+
+    /* Transiciones y Sombras */
+    --transicion-suave: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --sombra-neon-azul: 0 0 15px rgba(22, 162, 193, 0.4), 0 0 5px rgba(22, 162, 193, 0.6);
+    --sombra-neon-rosa: 0 0 15px rgba(252, 53, 130, 0.4), 0 0 5px rgba(252, 53, 130, 0.6);
+}
+
+/* Estilos base del cuerpo */
+body.plantilla-festival {
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    font-family: var(--fuente-cuerpo);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Títulos y Secciones */
+h1, h2, h3, h4, .navbar-brand, .btn {
+    font-family: var(--fuente-titulos);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.titulo-seccion {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-azul), var(--color-rosa));
+    border-radius: 2px;
+}
+
+.seccion-padding {
+    padding: 100px 0;
+}
+
+.texto-destacado {
+    color: var(--color-rosa);
+}
+
+
+/* 2. HEADER Y NAVEGACIÓN */
+.navegacion-urbana {
+    background-color: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-borde);
+    padding: 15px 0;
+    transition: var(--transicion-suave);
+}
+
+/*
+   COMENTARIO RA4: TRANSFORMACIÓN CSS
+   Se aplica una transformación sutil al logo del festival.
+   Al pasar el cursor, el logo rota ligeramente y aumenta su escala.
+   Esto añade dinamismo y feedback interactivo, un detalle profesional.
+*/
+.navbar-brand img {
+    height: 100px; /* Aumentamos el tamaño del logo */
+    transition: var(--transicion-suave);
+}
+
+.navbar-brand img:hover {
+    transform: rotate(-7deg) scale(1.1);
+}
+
+.nav-link {
+    color: var(--color-texto-principal) !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    padding-bottom: 8px;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    transition: var(--transicion-suave);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-rosa), var(--color-amarillo));
+    transition: var(--transicion-suave);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--color-amarillo) !important;
+}
+
+
+/* 3. HERO SECTION */
+.hero-seccion {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+.video-fondo-contenedor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-seccion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: 1;
+}
+
+.fecha-hero {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-amarillo);
+    letter-spacing: 3px;
+}
+
+/*
+   COMENTARIO RA4: ANIMACIÓN CSS (@keyframes)
+   La animación `brilloNeon` crea un efecto pulsante en el título principal.
+   Se utiliza `text-shadow` para simular un resplandor de neón que cambia de intensidad,
+   capturando la estética vibrante y nocturna de un festival urbano.
+*/
+@keyframes brilloNeon {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(252, 53, 130, 0.3), 0 0 10px rgba(252, 53, 130, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px var(--color-rosa), 0 0 40px var(--color-rosa), 0 0 60px var(--color-naranja);
+    }
+}
+
+.titulo-hero {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 900;
+    margin: 0.2em 0;
+    animation: brilloNeon 4s infinite linear;
+}
+
+.lugar-hero {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-texto-secundario);
+    letter-spacing: 2px;
+}
+
+/*
+   COMENTARIO RA4: TRANSICIÓN CSS
+   Se aplica una transición suave al botón principal. Al pasar el cursor,
+   el fondo, el color del texto y la sombra cambian con una animación fluida.
+   El icono también se desplaza, mejorando la experiencia de usuario (UX).
+*/
+.btn-urbano {
+    background: linear-gradient(90deg, var(--color-rosa), var(--color-naranja));
+    border: none;
+    color: #fff;
+    padding: 18px 45px;
+    font-weight: 900;
+    border-radius: 50px;
+    transition: var(--transicion-suave);
+    box-shadow: 0 5px 20px rgba(252, 53, 130, 0.4);
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.btn-urbano:hover {
+    background: linear-gradient(90deg, var(--color-naranja), var(--color-rosa));
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(247, 133, 51, 0.5);
+}
+
+.btn-urbano .texto-btn {
+    transition: var(--transicion-suave);
+}
+
+.btn-urbano .icono-btn {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    transition: var(--transicion-suave);
+}
+
+.btn-urbano:hover .icono-btn {
+    transform: translateX(5px);
+}
+
+/* 4. SECCIÓN ARTISTAS (CARRUSEL) */
+#carruselArtistas .carousel-item {
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.imagen-artista {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: var(--transicion-suave);
+}
+
+.info-artista {
+    padding: 0 2rem;
+}
+
+.nombre-artista {
+    font-size: 2.5rem;
+    color: var(--color-amarillo);
+    text-shadow: 0 0 10px rgba(249, 176, 43, 0.5);
+    margin-bottom: 1rem;
+}
+
+.bio-artista {
+    font-size: 1.1rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 1.5rem;
+}
+
+.dia-actuacion {
+    display: inline-block;
+    background-color: var(--color-rosa);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: var(--fuente-titulos);
+}
+
+/* Controles del carrusel personalizados */
+.controles-carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.carousel-indicators {
+    position: static;
+    margin: 0 1.5rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-borde);
+    border: none;
+    transition: var(--transicion-suave);
+}
+
+.carousel-indicators .active {
+    background-color: var(--color-rosa);
+    transform: scale(1.2);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: static;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 50%;
+    opacity: 1;
+    transition: var(--transicion-suave);
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: var(--color-azul);
+    border-color: var(--color-azul);
+    box-shadow: var(--sombra-neon-azul);
+}
+
+/* 5. SECCIÓN MULTIMEDIA */
+.fondo-alternativo {
+    background-color: #000;
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tarjeta-media {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transicion-suave);
+}
+
+.tarjeta-media:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.tarjeta-media-cuerpo {
+    padding: 30px;
+}
+
+.titulo-tarjeta-media {
+    font-size: 1.8rem;
+    color: var(--color-azul);
+    margin-bottom: 1rem;
+}
+
+.texto-tarjeta-media {
+    color: var(--color-texto-secundario);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.reproductor-audio {
+    width: 100%;
+    border-radius: 50px;
+    /* Estilo para que coincida con la paleta oscura */
+    filter: invert(0.9) hue-rotate(180deg) contrast(0.8) brightness(1.2);
+}
+
+.video-festival {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* 6. SECCIÓN EXPERIENCIA */
+.tarjeta-experiencia {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    height: 100%;
+    transition: var(--transicion-suave);
+}
+
+.tarjeta-experiencia:hover {
+    transform: translateY(-15px);
+    background-color: #222;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.icono-experiencia {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    transition: var(--transicion-suave);
+}
+
+.tarjeta-experiencia:hover .icono-experiencia {
+    transform: scale(1.1);
+    filter: drop-shadow(var(--sombra-neon-rosa));
+}
+
+.titulo-tarjeta {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--color-texto-principal);
+}
+
+.cuerpo-tarjeta {
+    color: var(--color-texto-secundario);
+    font-size: 1.05rem;
+}
+
+/* 7. FOOTER */
+.pie-pagina {
+    background-color: #000;
+    padding: 50px 0;
+    border-top: 2px solid var(--color-borde);
+}
+
+.copyright {
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
+
+.redes-sociales .icono-red-social {
+    color: var(--color-texto-secundario);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: var(--transicion-suave);
+}
+
+.redes-sociales .icono-red-social:hover {
+    color: var(--color-rosa);
+    transform: scale(1.2);
+    text-shadow: var(--sombra-neon-rosa);
+}

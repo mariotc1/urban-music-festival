@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Urban Music Festival - Edición 2026</title>
+        
+        <!-- Fuentes de Google: Poppins e Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+        
+        <!-- Bootstrap 5.3 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Font Awesome para Iconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <!-- Hoja de Estilos Personalizada -->
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body class="plantilla-festival">
+
+        <!-- 1. HEADER (Navegación y Logo) -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navegacion-urbana">
+            <div class="container">
+                <!-- Logo con clase para Transformación CSS -->
+                <a class="navbar-brand" href="#inicio">
+                    <img src="img/logo.png" alt="Logo Urban Music Festival" height="80">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="menuNavegacion">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#artistas">Line Up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 2. HERO SECTION -->
+        <header id="inicio" class="hero-seccion">
+            <div class="video-fondo-contenedor">
+                <video playsinline autoplay muted loop poster="img/poster-video.jpg" class="video-fondo">
+                    <source src="video/teaser_festival.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="contenido-hero">
+                <div class="container text-center">
+                    <p class="fecha-hero">22-24 AGOSTO 2026</p>
+                    <h1 class="titulo-hero animacion-brillo">Urban Music Festival</h1>
+                    <p class="lugar-hero">IFEMA, Madrid</p>
+                    <a href="#artistas" class="btn btn-urbano btn-lg mt-4">
+                        <span class="texto-btn">Comprar Tickets</span>
+                        <span class="icono-btn">→</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 3. SECCIÓN ARTISTAS (Carrusel Bootstrap) -->
+        <section id="artistas" class="seccion-padding">
+            <div class="container">
+                <h2 class="titulo-seccion">Cartel <span class="texto-destacado">Estelar</span></h2>
+                
+                <div id="carruselArtistas" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Artista 1: Bad Bunny -->
+                        <div class="carousel-item active">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <img src="img/badbunny.jpg" class="imagen-artista" alt="Bad Bunny en concierto">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="info-artista">
+                                        <h3 class="nombre-artista">Bad Bunny</h3>
+                                        <p class="bio-artista">El "Conejo Malo" ha redefinido la música urbana a nivel mundial. Con su estilo único y letras que rompen barreras, se ha consolidado como un ícono de la cultura pop y un referente indiscutible del trap latino.</p>
+                                        <span class="dia-actuacion">Actúa el Sábado 23</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Artista 2: Karol G -->
+                        <div class="carousel-item">
+                            <div class="row align-items-center flex-row-reverse">
+                                <div class="col-lg-6">
+                                    <img src="img/karol-g.png" class="imagen-artista" alt="Karol G en el escenario">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="info-artista text-lg-end">
+                                        <h3 class="nombre-artista">Karol G</h3>
+                                        <p class="bio-artista">La "Bichota" del reggaetón. Karol G ha conquistado el mundo con su poderosa voz y mensajes de empoderamiento. Es una de las artistas femeninas más influyentes del género, acumulando éxitos globales.</p>
+                                        <span class="dia-actuacion">Actúa el Viernes 22</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Artista 3: Rauw Alejandro -->
+                        <div class="carousel-item">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <img src="img/raw-alejandro.png" class="imagen-artista" alt="Rauw Alejandro bailando">
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="info-artista">
+                                        <h3 class="nombre-artista">Rauw Alejandro</h3>
+                                        <p class="bio-artista">Conocido por su versatilidad y sus movimientos de baile de otro planeta, Rauw Alejandro fusiona el reggaetón con R&B y sonidos futuristas. "El Zorro" es sinónimo de innovación y energía en el escenario.</p>
+                                        <span class="dia-actuacion">Actúa el Domingo 24</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controles del Carrusel -->
+                    <div class="controles-carrusel">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselArtistas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carruselArtistas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carruselArtistas" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carruselArtistas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselArtistas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN MULTIMEDIA (Audio y Video HTML5) -->
+        <section id="multimedia" class="seccion-padding fondo-alternativo">
+            <div class="container">
+                <h2 class="titulo-seccion">Vibra con <span class="texto-destacado">Nosotros</span></h2>
+                
+                <div class="row g-5 align-items-center">
+                    <!-- A) AUDIO HTML5 -->
+                    <div class="col-lg-6">
+                        <div class="tarjeta-media">
+                            <div class="tarjeta-media-cuerpo">
+                                <h3 class="titulo-tarjeta-media">Himno Oficial 2026</h3>
+                                <p class="texto-tarjeta-media">El beat que nos une. Sube el volumen y siente la energía del festival.</p>
+                                <!-- 
+                                    MULTIMEDIA (AUDIO):
+                                    - controls: Muestra la interfaz de usuario nativa del navegador (play, pausa, volumen, etc.),
+                                    permitiendo al usuario controlar la reproducción del audio.
+                                    - loop: Hace que el audio se repita automáticamente al finalizar, creando una banda
+                                    sonora continua para la sección.
+                                -->
+                                <audio controls loop class="reproductor-audio">
+                                    <source src="audio/musica_festival.mp3" type="audio/mpeg">
+                                    Tu navegador no soporta el elemento de audio. Por favor, actualízalo.
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- B) VIDEO HTML5 -->
+                    <div class="col-lg-6">
+                        <div class="tarjeta-media">
+                            <!-- 
+                                MULTIMEDIA (VIDEO):
+                                - controls: Proporciona al usuario controles de reproducción como play, pausa, y volumen
+                                para el video.
+                                - muted: Inicia el video en silencio. Es una buena práctica de UX y es requerido por
+                                muchos navegadores para permitir el autoplay.
+                                - poster: Muestra una imagen (poster) mientras el video se descarga o hasta que el
+                                usuario lo reproduce.
+                            -->
+                            <video controls muted poster="img/poster-video.jpg" class="video-festival">
+                                <source src="video/teaser_festival.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video. Por favor, actualízalo.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN EXPERIENCIA / INFORMACIÓN -->
+        <section id="experiencia" class="seccion-padding">
+            <div class="container">
+                <h2 class="titulo-seccion">Más que <span class="texto-destacado">Música</span></h2>
+                <div class="row g-4 justify-content-center">
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tarjeta-experiencia">
+                            <div class="icono-experiencia" style="color: var(--color-azul);">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3 class="titulo-tarjeta">Gastronomía Urbana</h3>
+                            <p class="cuerpo-tarjeta">Food trucks con la mejor comida callejera del mundo. Sabores que te harán vibrar casi tanto como la música.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tarjeta-experiencia">
+                            <div class="icono-experiencia" style="color: var(--color-rosa);">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="titulo-tarjeta">Arte y Cultura</h3>
+                            <p class="cuerpo-tarjeta">Exhibiciones de graffiti en vivo, muralismo digital y galerías de arte urbano. El festival es un lienzo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tarjeta-experiencia">
+                            <div class="icono-experiencia" style="color: var(--color-amarillo);">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <h3 class="titulo-tarjeta">Merch Exclusivo</h3>
+                            <p class="cuerpo-tarjeta">Llévate un trozo del festival a casa. Colecciones de ropa y accesorios disponibles solo para asistentes.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FOOTER -->
+        <footer class="pie-pagina">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                        <img src="img/logo.png" alt="Logo Urban Music Festival" height="70">
+                    </div>
+                    <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                        <p class="copyright m-0">&copy; 2026 Urban Music Festival. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="redes-sociales">
+                            <a href="#" class="icono-red-social"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="icono-red-social"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="icono-red-social"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" class="icono-red-social"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap Bundle JS (para el Carrusel y Navbar responsivo) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
