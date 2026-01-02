@@ -78,19 +78,20 @@ El proyecto se organiza en las siguientes carpetas:
 ```
 /
 ├── css/
-│   └── estilos.css       # Hoja de estilos principal
+│   └── estilos.css                 # Hoja de estilos principal
 ├── img/
-│   ├── artista1.jpg      # Imágenes del carrusel
+│   ├── artista1.jpg                # Imágenes del carrusel
 │   ├── artista2.jpg
 │   ├── artista3.jpg
-│   └── logo.png          # Logo del sitio
+│   └── logo.png                    # Logo del sitio
 ├── audio/
-│   └── musica_festival.mp3 # Pista de audio
+│   └── musica_festival.mp3         # Pista de audio
 ├── video/
-│   ├── festival.mp4        # Vídeos del sitio
+│   ├── festival.mp4                # Vídeos del sitio
 │   └── teaser_festival.mp4
-├── index.html            # Archivo principal HTML
-└── README.md             # Este archivo
+├── DIW-Pr-RA3yRA4-Multimedia.pdf   # Archivo principal HTML
+├── index.html                      # Archivo principal HTML
+└── README.md                       # Este archivo
 ```
 
 ---
