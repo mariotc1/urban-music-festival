@@ -110,6 +110,7 @@ A continuación se presenta la tabla de recursos multimedia utilizados, su orige
 
 ## 👤 Autores
 
--   **[Raúl Ortega Frutos y Mario Tomé Core]**
+-   **Raúl Ortega Frutos**
+-   **Mario Tomé Core**
 
 ¡Gracias por revisar nuestro trabajo!
