@@ -5,34 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Urban Music Festival - Edición 2026</title>
         
-        <!-- Fuentes de Google: Poppins e Inter -->
+        <!-- FUENTES DE GOOGLE: Poppins e Inter -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-        
-        <!-- Bootstrap 5.3 CSS -->
+
+        <!-- BOOTSTRAP 5.3 CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        
-        <!-- Font Awesome para Iconos -->
+
+        <!-- FONT AWESOME PARA ICONOS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        <!-- Hoja de Estilos Personalizada -->
+        <!-- HOJA DE ESTILOS PERSONALIZADA -->
         <link rel="stylesheet" href="css/estilos.css">
     </head>
     <body class="plantilla-festival">
 
-        <!-- 1. HEADER (Navegación y Logo) -->
+        <!-- 1. HEADER (navegación y logo) -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top navegacion-urbana">
             <div class="container">
-                <!-- Logo con clase para Transformación CSS -->
+                <!-- logo con clase para la transformación CSS -->
                 <a class="navbar-brand" href="#inicio">
                     <img src="img/logo.png" alt="Logo Urban Music Festival" height="80">
                 </a>
                 
+                <!-- botón hamburguesa para pantallas pequeñas -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
+                <!-- menú de navegación colapsable -->
                 <div class="collapse navbar-collapse" id="menuNavegacion">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
@@ -46,11 +48,14 @@
 
         <!-- 2. HERO SECTION -->
         <header id="inicio" class="hero-seccion">
+            <!-- video de fondo -->
             <div class="video-fondo-contenedor">
                 <video playsinline autoplay muted loop poster="img/poster-video.jpg" class="video-fondo">
                     <source src="video/teaser_festival.mp4" type="video/mp4">
                 </video>
             </div>
+
+            <!-- contenido del hero -->
             <div class="contenido-hero">
                 <div class="container text-center">
                     <p class="fecha-hero">22-24 AGOSTO 2026</p>
@@ -64,14 +69,14 @@
             </div>
         </header>
 
-        <!-- 3. SECCIÓN ARTISTAS (Carrusel Bootstrap) -->
+        <!-- 3. SECCIÓN ARTISTAS (carrusel Bootstrap) -->
         <section id="artistas" class="seccion-padding">
             <div class="container">
                 <h2 class="titulo-seccion">Cartel <span class="texto-destacado">Estelar</span></h2>
                 
                 <div id="carruselArtistas" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <!-- Artista 1: Kael -->
+                        <!-- ARTISTA 1: Kael -->
                         <div class="carousel-item active">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
@@ -86,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Artista 2: Nia -->
+                        <!-- ARTISTA 2: Nia -->
                         <div class="carousel-item">
                             <div class="row align-items-center flex-row-reverse">
                                 <div class="col-lg-6">
@@ -101,7 +106,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Artista 3: DJ Alexia -->
+                        <!-- ARTISTA 3: DJ Alexia -->
                         <div class="carousel-item">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
@@ -151,11 +156,9 @@
                                 <h3 class="titulo-tarjeta-media">Himno Oficial 2026</h3>
                                 <p class="texto-tarjeta-media">El beat que nos une. Sube el volumen y siente la energía del festival.</p>
                                 <!-- 
-                                    MULTIMEDIA (AUDIO):
-                                    - controls: Muestra la interfaz de usuario nativa del navegador (play, pausa, volumen, etc.),
-                                    permitiendo al usuario controlar la reproducción del audio.
-                                    - loop: Hace que el audio se repita automáticamente al finalizar, creando una banda
-                                    sonora continua para la sección.
+                                    AUDIO HTML5:
+                                    - controls: muestra la interfaz de usuario nativa del navegador (play, pausa, volumen, etc.)
+                                    - loop: hace que el audio se repita automáticamente al finalizar
                                 -->
                                 <audio controls loop class="reproductor-audio">
                                     <source src="audio/musica_festival.mp3" type="audio/mpeg">
@@ -165,17 +168,14 @@
                         </div>
                     </div>
 
-                    <!-- B) VIDEO HTML5 -->
-                    <div class="col-lg-6">
+                        <!-- B) VIDEO HTML5 -->
+                        <div class="col-lg-6">
                         <div class="tarjeta-media">
                             <!-- 
-                                MULTIMEDIA (VIDEO):
-                                - controls: Proporciona al usuario controles de reproducción como play, pausa, y volumen
-                                para el video.
-                                - muted: Inicia el video en silencio. Es una buena práctica de UX y es requerido por
-                                muchos navegadores para permitir el autoplay.
-                                - poster: Muestra una imagen (poster) mientras el video se descarga o hasta que el
-                                usuario lo reproduce.
+                                VIDEO HTML5:
+                                - controls: Proporciona al usuario controles de reproducción como play, pausa, y volumen para el video
+                                - muted: inicia el video en silencio (como buena práctica de UX y es requerido por muchos navegadores para permitir el autoplay)
+                                - poster: muestra una imagen mientras el video se descarga o hasta que el usuario lo reproduce
                             -->
                             <video controls muted poster="img/poster-video.jpg" class="video-festival">
                                 <source src="video/festival.mp4" type="video/mp4">
@@ -231,12 +231,17 @@
         <footer class="pie-pagina">
             <div class="container">
                 <div class="row align-items-center">
+                    <!-- logo -->
                     <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
                         <img src="img/logo.png" alt="Logo Urban Music Festival" height="70">
                     </div>
+
+                    <!-- copyright -->
                     <div class="col-lg-4 text-center mb-4 mb-lg-0">
                         <p class="copyright m-0">&copy; 2026 Urban Music Festival</p>
                     </div>
+
+                    <!-- redes sociales -->
                     <div class="col-lg-4 text-center text-lg-end">
                         <div class="redes-sociales">
                             <a href="#" class="icono-red-social"><i class="fab fa-instagram"></i></a>
@@ -249,8 +254,10 @@
             </div>
         </footer>
 
-        <!-- Bootstrap Bundle JS (para el Carrusel y Navbar responsivo) -->
+        <!-- BOOTSTRAP BUNDLE JS (para el Carrusel y Navbar responsive) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- PARA QUE LA PÁGINA CARGUE EN LA PARTE SUPERIOR -->
         <script>
             window.onload = function() {
               window.scrollTo(0, 0);
