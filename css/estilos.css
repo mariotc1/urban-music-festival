@@ -1,29 +1,29 @@
 /* 1. CONFIGURACIÓN GENERAL Y VARIABLES */
 :root {
-    /* Identidad Visual Corporativa */
+    /* identidad visual corporativa */
     --color-fondo: #0f0f0f;
     --color-superficie: #1a1a1a;
     --color-borde: #2a2a2a;
     --color-texto-principal: #ffffff;
     --color-texto-secundario: #a0a0a0;
 
-    /* Paleta de Acentos Urbanos */
+    /* paleta de colores del logo */
     --color-azul: #16a2c1;
     --color-rosa: #fc3582;
     --color-amarillo: #f9b02b;
     --color-naranja: #f78533;
     
-    /* Tipografías Profesionales */
+    /* tipografías */
     --fuente-titulos: 'Poppins', 'Montserrat', sans-serif;
     --fuente-cuerpo: 'Inter', 'Roboto', sans-serif;
 
-    /* Transiciones y Sombras */
+    /* transiciones y sombras */
     --transicion-suave: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     --sombra-neon-azul: 0 0 15px rgba(22, 162, 193, 0.4), 0 0 5px rgba(22, 162, 193, 0.6);
     --sombra-neon-rosa: 0 0 15px rgba(252, 53, 130, 0.4), 0 0 5px rgba(252, 53, 130, 0.6);
 }
 
-/* Estilos base del cuerpo */
+/* ESTILOS BASE DEL BODY */
 body.plantilla-festival {
     background-color: var(--color-fondo);
     color: var(--color-texto-principal);
@@ -34,7 +34,7 @@ body.plantilla-festival {
     scroll-behavior: smooth;
 }
 
-/* Títulos y Secciones */
+/* ESTILOS DE TÍTULOS Y SECCIONES */
 h1, h2, h3, h4, .navbar-brand, .btn {
     font-family: var(--fuente-titulos);
     font-weight: 900;
@@ -82,13 +82,12 @@ h1, h2, h3, h4, .navbar-brand, .btn {
 }
 
 /*
-   COMENTARIO RA4: TRANSFORMACIÓN CSS
-   Se aplica una transformación sutil al logo del festival.
-   Al pasar el cursor, el logo rota ligeramente y aumenta su escala.
-   Esto añade dinamismo y feedback interactivo, un detalle profesional.
+   RA4: TRANSFORMACIÓN CSS
+   - transformación sutil al logo del festival
+   - al pasar el cursor el logo rota ligeramente y aumenta su escala
 */
 .navbar-brand img {
-    height: 100px; /* Aumentamos el tamaño del logo */
+    height: 100px; 
     transition: var(--transicion-suave);
 }
 
@@ -177,10 +176,9 @@ h1, h2, h3, h4, .navbar-brand, .btn {
 }
 
 /*
-   COMENTARIO RA4: ANIMACIÓN CSS (@keyframes)
-   La animación `brilloNeon` crea un efecto pulsante en el título principal.
-   Se utiliza `text-shadow` para simular un resplandor de neón que cambia de intensidad,
-   capturando la estética vibrante y nocturna de un festival urbano.
+   RA4: ANIMACIÓN CSS (@keyframes)
+   - la animación `brilloNeon` crea un efecto pulsante en el título principal del hero
+   - se utiliza `text-shadow` para simular un resplandor de neón que cambia de intensidad
 */
 @keyframes brilloNeon {
     0%, 100% {
@@ -206,10 +204,10 @@ h1, h2, h3, h4, .navbar-brand, .btn {
 }
 
 /*
-   COMENTARIO RA4: TRANSICIÓN CSS
-   Se aplica una transición suave al botón principal. Al pasar el cursor,
-   el fondo, el color del texto y la sombra cambian con una animación fluida.
-   El icono también se desplaza, mejorando la experiencia de usuario (UX).
+   RA4: TRANSICIÓN CSS
+   - transición suave al botón principal
+   - al pasar el cursor, el fondo, el color del texto y la sombra cambian con una animación fluida
+   - el icono también se desplaza
 */
 .btn-urbano {
     background: linear-gradient(90deg, var(--color-rosa), var(--color-naranja));
@@ -284,7 +282,7 @@ h1, h2, h3, h4, .navbar-brand, .btn {
     font-family: var(--fuente-titulos);
 }
 
-/* Controles del carrusel personalizados */
+/* CONTROLES DEL CARRUSEL PERSONALIZADOS */
 .controles-carrusel {
     display: flex;
     justify-content: center;
