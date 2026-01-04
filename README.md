@@ -1,8 +1,8 @@
 # Urban Music Festival - Proyecto de Diseño de Interfaces Web
 
-Este proyecto es la implementación de un sitio web estático para un festival de música urbana, desarrollado como parte de la evaluación de los Resultados de Aprendizaje 3 y 4 (RA3 y RA4) del módulo de **Diseño de Interfaces Web** del ciclo formativo DAW.
+Este proyecto es la implementación de un sitio web estático para un festival de música urbana, desarrollado como parte de la evaluación de los Resultados de Aprendizaje 3 y 4 del módulo de **Diseño de Interfaces Web** del ciclo formativo DAW.
 
-El sitio está diseñado para ser visualmente impactante, moderno y totalmente responsivo, aplicando conceptos avanzados de HTML5 y CSS3 para la integración de contenido multimedia y efectos visuales.
+El sitio está diseñado para ser visualmente impactante, moderno y totalmente responsive, aplicando conceptos avanzados de HTML5 y CSS3 para la integración de contenido multimedia y efectos visuales.
 
 **Ver demo en vivo:** [https://urban-music-festival.vercel.app/](https://urban-music-festival.vercel.app/)
 
@@ -89,7 +89,7 @@ El proyecto se organiza en las siguientes carpetas:
 ├── video/
 │   ├── festival.mp4                # Vídeos del sitio
 │   └── teaser_festival.mp4
-├── DIW-Pr-RA3yRA4-Multimedia.pdf   # Archivo principal HTML
+├── DIW-Pr-RA3yRA4-Multimedia.pdf   # Enunciado de la práctica
 ├── index.html                      # Archivo principal HTML
 └── README.md                       # Este archivo
 ```
@@ -113,4 +113,4 @@ A continuación se presenta la tabla de recursos multimedia utilizados, su orige
 -   **Raúl Ortega Frutos**
 -   **Mario Tomé Core**
 
-¡Gracias por revisar nuestro trabajo!
+Gracias por revisar nuestro trabajo!!
